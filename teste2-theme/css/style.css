@@ -1,0 +1,623 @@
+
+/*
+Theme Name: Teste 2
+Author: Vinicius Santos
+Author URI: https://github.com/ed3seven
+*/
+
+
+fieldset, form, label, legend,
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+	list-style: none;
+}
+body, input, textarea, select, button, .font-exo {
+	font-family: "Asap", sans-serif;
+	font-size: 14px;
+	color: #222;
+	background-color: #e6e6e6;
+}
+.container {
+	width: 1320px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.banner {
+	background: #e6e6e6;
+	margin: 0 0 10px 0;
+	padding: 10px 0;
+	text-align: center;
+}
+
+
+/* HEADER, MENU E PESQUISA */
+
+.h-header {
+	background-color: #ed1c24;
+	padding-top: 20px;
+	position: relative;
+}
+.h-logo {
+    float: left;
+    width: 189px;
+    height: 44px;
+    margin: 0 20px 18px 20px;
+}
+.h-menu-prin {
+    float: right;
+    padding: 0;
+    margin-top: -20px;
+}
+.h-menu-prin button {
+	display: none;
+}
+.h-menu-prin > ul > li {
+    display: inline-block;
+}
+.h-menu-prin > ul > li:hover {
+    background-color: #242424;
+    transition-delay: .25s;
+}
+.h-menu-prin > ul > li > a {
+    color: white;
+    font-family: dosis, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    padding: 35px 22px 30px 12px;
+    position: relative;
+    text-decoration: none;
+}
+.h-menu-prin > ul > li > a:after {
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    width: 0;
+    height: 0;
+    font-size: 14px;
+    color: white;
+    content: '❯';
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+.h-menu-prin > ul > li:hover > .h-submenu {
+    visibility: visible;
+    transition-delay: .25s;
+}
+.h-submenu {
+    visibility: hidden;
+    position: absolute;
+    width: 1320px;
+    left: 0;
+    top: 82px;
+    z-index: 10;
+    background: #242424;
+    border-bottom: 2px solid #ed1c24;
+    height: 220px;
+    transition: .1s .5s;
+}
+.h-button {
+    font-weight: bold;
+    width: initial;
+    background: #474747;
+    padding: 7px 25px;
+    float: left;
+    margin: 20px 0 0 20px;
+}
+.h-button:hover {
+    background-color: #ED1C24;
+}
+.h-button a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.h-lista {
+    padding: 15px;
+    font-family: "Asap";
+    float: right;
+    width: 1010px;
+}
+.h-lista li {
+    display: inline-block;
+    margin: 5px 0 15px 0;
+    width: 200px;
+}
+.h-lista a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.h-lista a:hover {
+    color: #ED1C24;
+}
+.h-block a {
+    cursor: not-allowed;
+}
+.h-block:hover {
+    background-color: initial !important;
+}
+.h-lista-button {
+    font-weight: bold;
+    position: absolute;
+    width: 236px;
+    height: 100%;
+    background: #474747;
+    float: left;
+    padding: 3px 0;
+    box-sizing: border-box;
+}
+.h-lista-button > li {
+    position: relative;
+    text-align: right;
+    padding: 13px 30px;
+}
+.h-lista-button > a {
+    color: #fff;
+    font-size: 15px;
+    padding: 0 22px;
+    font-weight: normal;
+}
+.h-lista-button > li.is_active {
+    background-color: #242424;
+}
+.h-lista-button > li.is_active:before {
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    color: white;
+    content: '❯';
+}
+.h-lista-button > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.h-lista-button > li > a:hover {
+    color: #ED1C24;
+}
+.h-busca-form {
+	float: right;
+	background: white;
+	height: 33px;
+	margin: 8px 28px 0 28px;
+	position: relative;
+}
+.h-busca {
+	height: 33px;
+	width: 145px;
+	padding-left: 10px;
+	border: 0;
+	line-height: 33px;
+	margin: 0;
+	background-color: #fff;
+}
+.h-busca-ico {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: #a3a3a3;
+	font-size: 16px;
+}
+.h-busca-form input[type=submit] {
+	display: none;
+}
+.h-mais-acessados {
+    width: 100%;
+    background: #242424;
+    border-top: 1px solid #d41f1f;
+    padding-left: 140px;
+    height: 29px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.h-mais-acessados > ul > li {
+    display: inline-block;
+    margin: 7px 24px 0 40px;
+}
+.h-mais-acessados > ul > li > a {
+    color: white;
+    display: block;
+    font-family: dosis, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.h-mais-acessados > ul > li > a:hover {
+    color: #ED1C24;
+}
+.h-mais-acessados:before {
+    height: 28px;
+    content: "+ ACESSADOS";
+    padding-top: 5px;
+    width: 140px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font: 700 14px "Dosis",Sans-serif;
+    color: white;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background-image: url('../img/menu-shape.png');
+    background-size: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* GRID DE IMAGENS E LINKS EM DESTAQUE */
+
+section.grid {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.g-destaque {
+    display: inline-block;
+}
+.g-space.big {
+    float: left;
+    width: 660px;
+    height: 500px;
+    overflow: hidden;
+}
+.g-space.medium {
+    float: left;
+    width: 330px;
+    height: 250px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.g-space.publicidade {
+    float: left;
+    width: 330px;
+    height: 250px;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    background-color: #242424;
+}
+.g-box {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    height: inherit;
+    width: inherit;
+}
+.g-box:hover:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #ED1C24;
+    z-index: 3;
+    box-sizing: border-box;
+}
+.g-box figure, .c-box figure {
+    margin: 0;
+    position: relative;
+    height: inherit;
+}
+.g-destaque figure:after, .c-destaque figure:after {
+    content: "";
+    background: rgba(0,0,0,0.83);
+    background: linear-gradient(to bottom,rgba(0,0,0,0.8) 0,rgba(0,0,0,0.5) 9%,rgba(0,0,0,0.1) 17%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.35) 70%,rgba(0,0,0,0.42) 72%,rgba(0,0,0,0.44) 75%,rgba(0,0,0,0.81) 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.g-box:hover figure:after, .c-box:hover figure:after {
+    background: linear-gradient(to bottom,rgba(0,0,0,0.8) 0,rgba(0,0,0,0.55) 9%,rgba(0,0,0,0.15) 17%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 70%,rgba(0,0,0,0.62) 72%,rgba(0,0,0,0.64) 75%,rgba(0,0,0,0.81) 100%);
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* position: relative; */
+}
+.big .g-tag {
+    text-transform: uppercase;
+    font: 700 14px Dosis;
+    text-indent: 23px;
+    margin: 10px;
+    color: #fff;
+    position: absolute;
+    z-index: 3;
+    bottom: 103px;
+    right: 5px;
+}
+.medium .g-tag {
+    text-transform: uppercase;
+    font: 700 14px Dosis;
+    text-indent: 23px;
+    margin: 10px;
+    color: #fff;
+    position: absolute;
+    z-index: 3;
+    bottom: 103px;
+    right: 5px;
+}
+.g-tag:before, .c-tag:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: #ed1c24;
+    border-radius: 2px;
+ }
+.big .g-title {
+    font: 600 32px "Dosis";
+    padding: 0 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    text-transform: uppercase;
+    width: 358px;
+    text-align: right;
+    margin: 25px 0;
+}
+.medium .g-title {
+    font: 600 21px "Dosis";
+    padding: 0 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: right;
+    margin: 25px 0;
+    text-indent: 160px;
+}
+.g-space.publicidade {
+    float: left;
+    width: 330px;
+    height: 250px;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    background-color: #242424;
+}
+
+
+
+/* GRID DE IMAGENS E LINKS EM DESTAQUE */
+
+section.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.c-destaque {
+    display: inline-block;
+}
+.c-space.medium {
+    float: left;
+    list-style: none;
+    width: 324px;
+    margin: 0 8px 0 0;
+    padding: 0 0 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+.c-box {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: inherit;
+}
+.c-box:hover > h4 {
+    color: #ED1C24;
+}
+.c-box:hover figure:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #ED1C24;
+    z-index: 3;
+    box-sizing: border-box;
+}
+.c-tag {
+    top: 210px;
+    left: 7px;
+    text-transform: uppercase;
+    font: 700 14px Dosis;
+    text-indent: 23px;
+    margin: 10px;
+    color: #fff;
+    position: absolute;
+    z-index: 3;
+}
+.c-title {
+    font: 700 22px "Dosis";
+    color: #000;
+    text-align: left;
+    margin: 0;
+    margin-top: 5px;
+    padding: 5px 15px;
+}
+.c-subtitle {
+    font: 700 16px "Dosis";
+    color: #242424;
+    text-align: left;
+    margin: 0;
+    padding: 5px 15px;
+}
+.c-space.medium:last-child {
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (max-width: 768px) {
+	.h-header {
+		
+padding: 1px 0 0;
+	}
+	.container {
+		width: 100%;
+	}
+	.banner, .h-mais-acessados, .h-busca {
+		display: none;
+	}
+	.h-menu-prin {
+		float: initial;
+		margin-top: 0;
+		position: absolute;
+		z-index: 10;
+		width: 100%;
+		top: 56px;
+		/* visibility: hidden; */
+	}
+	.h-menu-prin > ul > li {
+		display: block;
+	}
+	.h-menu-prin > ul > li > a {
+		padding: 14px 20px;
+		font-size: 18px;
+		background-color: #d41f1f;
+		border-bottom: 1px solid #ED1C24;
+	}
+	.h-logo {
+		float: initial;
+		width: 100%;
+		height: 35px;
+		margin: 0 auto;
+		padding: 10px 0;
+		text-align: center;
+	}
+	.h-logo img {
+		height: 35px;
+	}
+	.h-busca-form {
+		position: absolute;
+		top: 3px;
+		left: 16px;
+	}
+	.h-busca-ico {
+		-webkit-filter: brightness(2);
+	}
+	.h-menu-prin > ul > li > a:after {
+		top: 22px;
+		right: 20px;
+	}
+	section.grid {
+		margin: 0;
+	}
+	.g-space {
+		width: 100% !important;
+		height: initial !important;
+	}
+	.g-box img, .c-box img {
+		width: 100%;
+	}
+	.g-title {
+		font-size: 22px !important;
+	}
+	.c-space {
+		width: 100% !important;
+		padding: 0 14px 20px !important;
+		box-sizing: border-box;
+	}
+	.h-menu-prin > ul {
+		display: none;
+	}
+	button.open {
+		background-image: url("../img/menu.png");
+		position: absolute;
+		z-index: 200;
+		top: -48px;
+		right: 8px;
+		width: 42px;
+		height: 42px;
+		margin-left: 0px;
+		background-size: 32px;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+	}
+	button.close {
+	    background-image: url("../img/close.png");
+	    position: absolute;
+	    z-index: 200;
+	    top: -48px;
+	    right: 8px;
+	    width: 42px;
+	    height: 42px;
+	    margin-left: 0px;
+	    background-size: 20px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    cursor: pointer;
+	    background-color: #D41F1F;
+	    border: none;
+	}
+	.h-lista {
+		width: initial;
+	}
+	.h-submenu {
+		width: initial;
+		top: 50px;
+		height: initial;
+	}
+	.h-lista > li {
+		display: inline-block;
+		margin: 5px 0px 15px 10px;
+		width: 100%;
+	}
+	.h-lista a {
+		font-size: 18px;
+	}
+	.h-button, .h-menu-testes .h-submenu, .g-space.publicidade {
+		display: none;
+	}
+	.c-tag {
+    	top: 5px;
+	}
+	.h-menu-prin button {
+		display: block;
+	}
+}
